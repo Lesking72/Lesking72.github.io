@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: lesking72.github.io
+Token: 1343830bbb1dd3fd64cb34d36f3963af3bf859d2ceb4826e95afaaacdccdc901
