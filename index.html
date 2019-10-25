@@ -1,24 +1,71 @@
-<!DOCTYPE html>
+<!--
+david made this
+les made it better
+-->
 <html>
-
-	<head>
-		<title>Hello World</title>
-		<style>
-			body {
-				font-family: sans-serif;
-			}
-		</style>
-	</head>
-	
-	<body>
-	<h1>Les King</h1>
-	<hr>
-	This is my GitHub site, where I sometimes upload things that involve working with low-level HTML
-	rather than using a site builder.
-	
-	Currently, the only thing here is my custom Minecraft News page for use with a modified version of the old Minecraft Launcher.
-	<br><br>
-	Visit it <a href="https://lesking72.github.io/mcupdate">here</a>
-	</body>
-
+<head>
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<meta charset="utf-8">
+<title>Matrix</title>
+<style>
+	canvas {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		min-width: 1920px;
+		min-height: 1080px;
+	}
+</style>
+</head>
+<body>
+<div align="center">
+<canvas id="q" width=1920px height=1080px>Your browser does not support the HTML5 canvas.</canvas>
+</div>
+<script>
+$(document).ready(function(){
+var s=window.screen;
+var width = q.width=s.width;
+var height = q.height;
+var yPositions = Array(300).join(0).split('');
+var ctx=q.getContext('2d');
+var draw = function () {
+  ctx.fillStyle='rgba(0,0,0,.05)';
+  ctx.fillRect(0,0,width,height);
+  ctx.fillStyle='#0F0';
+  ctx.font = '10pt Lucida Console';
+  yPositions.map(function(y, index){
+    text = String.fromCharCode(1e2+Math.random()*33);
+    x = (index * 10)+10;
+    q.getContext('2d').fillText(text, x, y);
+if(y > 100 + Math.random()*1e4)
+{
+  yPositions[index]=0;
+}
+else
+{
+      yPositions[index] = y + 10;
+}
+  });
+};
+RunMatrix();
+function RunMatrix()
+{
+if(typeof Game_Interval != "undefined") clearInterval(Game_Interval);
+Game_Interval = setInterval(draw, 33);
+}
+function StopMatrix()
+{
+clearInterval(Game_Interval);
+}
+//setInterval(draw, 33);
+$("button#pause").click(function(){
+StopMatrix();});
+$("button#play").click(function(){RunMatrix();});
+document.addEventListener('keyup', (e) => {
+  if (e.code === "ArrowUp") RunMatrix();
+  else if (e.code === "ArrowDown") StopMatrix();
+});
+})
+</script>
+</body>
 </html>
