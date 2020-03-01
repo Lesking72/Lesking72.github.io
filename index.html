@@ -12,17 +12,17 @@ les made it better
 		position: fixed;
 		right: 0;
 		bottom: 0;
-		min-width: 1920px;
-		min-height: 1080px;
 	}
 </style>
 </head>
 <body>
 <div align="center">
-<canvas id="q" width=1920px height=1080px>Your browser does not support the HTML5 canvas.</canvas>
+<canvas id="q">Your browser does not support the HTML Canvas.</canvas>
 </div>
 <script>
 $(document).ready(function(){
+q.width = window.innerWidth;
+q.height = window.innerHeight;
 var s=window.screen;
 var width = q.width=s.width;
 var height = q.height;
