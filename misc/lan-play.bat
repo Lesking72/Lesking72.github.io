@@ -1,5 +1,5 @@
 @echo off
-title LAN Play Launcher - https://lesking72.github.io/lan-play
+title LAN Play Launcher - https://lesking72.github.io/lan-play.html
 color 1f
 
 if not exist "lan-play-win64.exe" (
