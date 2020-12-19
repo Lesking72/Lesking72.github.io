@@ -6,32 +6,61 @@
             body {
                 font-family: sans-serif;
             }
+			h2 {
+				margin-bottom: 0;
+			}
+			.ind {
+				margin-left: 3.5em;
+			}
         </style>
     </head>
     <body>
         <h1>F.A.Q</h1>
             <h2>Does this cache for offline use?</h2>
-                Yes, but it only caches payloads you used while online. I'm not sure why this is,<br>
-                so I don't know how to fix it. As long as you've clicked it and let the exploit start (or fail), it's cached.<br>
-                If you have cache issues, clear ALL your browser data, turn off the console and unplug it for a few minutes.
-            <h2>Can you add X?</h2>
-                Probably not, but it never hurts to ask. This is mostly a stop-gap until the usual sources update their hosts.
-            <h2>Is there a self-host version?</h2>
-                <a href="https://lesking72.github.io/ps4/selfhost.zip">https://lesking72.github.io/ps4/selfhost.zip</a>
-            <h2>What on earth is that styling?</h2>
-                Not sure.
+				<div class=ind>
+					Yes, but it only caches payloads you used while online. I'm not sure why this is, so I don't know how (and don't care enough)<br>
+					to make it cache everything automagically. As long as you've clicked it and let the exploit start (or fail), it's cached.<br>
+					If you have cache issues, clear ALL your browser data, turn off the console and unplug it for a few minutes.
+				</div>
+			<h2>Can you add X?</h2>
+                <div class=ind>
+					Probably not, but it never hurts to ask. This is mostly a stop-gap until the usual sources update their hosts.
+				</div>
+			<h2>Is there a self-host version?</h2>
+                <div class=ind>
+				<a href="https://lesking72.github.io/ps4/selfhost.zip">https://lesking72.github.io/ps4/selfhost.zip</a>. It can be hosted with a server such as <a href="http://miniweb.sourceforge.net/">MiniWeb</a>
+				</div>
+			<h2>What on earth is that styling?</h2>
+                <div class=ind>
+					heh, tech tips
+				</div>
             <h2>When I click a button it just gives me a 404 / the exploit never loads!</h2>
-                Make sure the URL has a trailing / at the end or the relative paths won't work.<br>
-                It should look like https://lesking72.github.io/ps4/, or 10.0.0.153/ps4/ or 10.0.0.153/ or however you host it.<br>
-                If you did that and it's still broken, I probably broke it. Complain to Les#5465.
+                <div class=ind>
+					Make sure the URL has a trailing / at the end or the relative paths won't work.<br>
+					It should look like https://lesking72.github.io/ps4/, or 10.0.0.153/ps4/ or 10.0.0.153/ or however you host it.<br>
+					Note that "never loads" does not mean "constantly fails", this exploit has about a 10% success rate.<br>
+					If you did all that and it's still broken, I probably broke it. Complain to Les#5465.
+				</div>
+			<h2>Whats X in the debug settings?</h2>
+				<div class=ind>
+					If you don't know what something does, don't touch it.
+				</div>
+			<h2>What's IDU mode?</h2>
+				<div class=ind>
+					Store demo mode. It automatically updates the firmware, which will leave you stuck in<br>
+					IDU mode because you won't be able to access the debug settings to turn it off.<br>
+					<b>DON'T ENABLE IDU MODE OR YOU'LL BE STUCK ON THE LATEST FIRMWARE, AND IN IDU MODE.</b><br>
+					If you enabled it and had your firmware update, the only thing you can do is put your PS4<br>
+					in the back of a closet until an exploit is released for the version it updated to.
+				</div>
             <h2>Who all made this happen?</h2>
-                David Miller - HEN page, which was modified for everything else<br>
-                ChendoChap - The HEN itself, and the netcat page<br>
-                Synacktiv - WebKit exploit<br>
-                Sleirsgoevy - ported the WebKit exploit to 7.02<br>
-                Andy Nguyen - kernel exploit<br>
-                SpecterDev, kiwidog, Fire30 and SocraticBliss were also involved.
-
-
+                <div class=ind>
+					David Miller - HEN page, which was modified for everything else<br>
+					ChendoChap - The HEN itself, and the netcat page<br>
+					Synacktiv - WebKit exploit<br>
+					Sleirsgoevy - ported the WebKit exploit to 7.02<br>
+					Andy Nguyen - kernel exploit<br>
+					SpecterDev, kiwidog, Fire30 and SocraticBliss were also involved.
+				</div>
     </body>
 </html>
