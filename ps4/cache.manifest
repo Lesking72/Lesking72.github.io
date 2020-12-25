@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# ver: 1
+# ver: 2
 
 bg.png
 cc1.gif
@@ -40,6 +40,17 @@ restore/index.html
 restore/userland.js
 rif-renamer/index.html
 rif-renamer/userland.js
+sleirs/702.js
+sleirs/index.html
+sleirs/int64.js
+sleirs/jb-c-code.js
+sleirs/linux.js
+sleirs/linux-3gb.js
+sleirs/mira.js
+sleirs/mira2.js
+sleirs/mira-c-code.js
+sleirs/ps4.js
+sleirs/utils.js
 utils/int64.js
 utils/ps4.js
 utils/rop.js
