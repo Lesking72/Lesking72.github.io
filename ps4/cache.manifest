@@ -1,7 +1,7 @@
 CACHE MANIFEST
-# ver: 2
+# ver: 3
 
-bg.png
+bg.jpg
 cc1.gif
 index.html
 info.html
@@ -29,10 +29,6 @@ kernel-clock/index.html
 kernel-clock/userland.js
 kernel-dumper/index.html
 kernel-dumper/userland.js
-linux/index.html
-linux/userland.js
-linux-normal-edid/index.html
-linux-normal-edid/userland.js
 netcat/index.html
 netcat/rop.js
 netcat/userland.js

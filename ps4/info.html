@@ -18,15 +18,13 @@
         <h1>Questions you probably don't have</h1>
             <h2>Does this cache for offline use?</h2>
 				<div class=ind>
-					Yes, but to be completely honest, I don't fully understand how caching works. Test it and make sure it works properly before you<br>
-					find yourself without an internet connection. If you have cache issues, clear ALL your browser data, turn the console off<br>
-					and unplug it for a few minutes.
+					Yes. Test it and make sure it works properly before you find yourself without an internet connection.<br>
+					If you have cache issues, clear ALL your browser data, turn the console off and unplug it for a few minutes.
 				</div>
 			<h2>What are the 'untested' payloads?</h2>
 				<div class=ind>
 					'untested' simply means I haven't tested them. So I can't speak as to whether they work on this exploit host<br>
-					(or if they work at all). It's very likely that they do work, but I can't verify it. If you've tested it<br>
-					please drop me a line.
+					(or if they work at all). If you've tested one, please drop me a line.
 				</div>
 			<h2>Can you add X?</h2>
                 <div class=ind>
@@ -40,13 +38,6 @@
                 <div class=ind>
 					heh, tech tips
 				</div>
-            <h2>When I click a button it just gives me a 404 / the exploit never loads!</h2>
-                <div class=ind>
-					Make sure the URL has a trailing / at the end or the relative paths won't work.<br>
-					It should look like https://lesking72.github.io/ps4/, or 10.0.0.153/ps4/ or 10.0.0.153/ or however you host it.<br>
-					Note that "never loads" does not mean "constantly fails", this exploit has about a 10% success rate.<br>
-					If you did all that and it's still broken, I probably broke it. Complain to Les#5465.
-				</div>
 			<h2>Do I really need to restart after each failure?</h2>
 				<div class=ind>
 					If you get an "Out of memory" error, you can dismiss it and let the page reload to try again. If you get any other<br>
@@ -56,12 +47,6 @@
 			<h2>Should the screen go black when starting Mira?</h2>
 				<div class=ind>
 					Mira restarts the shell when it loads, this behavior is normal.
-				</div>
-			<h2>Why should I use Mira over HEN?</h2>
-				<div class=ind>
-					Mira is a framework for developing and running homebrew. Where HEN just bypasses signature enforcement,<br>
-					Mira behaves more like a true custom firmware. Most importantly, homebrew can be developed without relying<br>
-					on leaked Sony SDKs. tl;dr: it's down to your preference, but most homebrew needs it.
 				</div>
 			<h2>Whats X in the debug settings?</h2>
 				<div class=ind>
@@ -75,14 +60,14 @@
 					If you enabled it and had your firmware update, the only thing you can do is put your PS4<br>
 					in the back of a closet until an exploit is released for the version it updated to.
 				</div>
-            <h2>Who all made this happen?</h2>
+            <h2>Credits:</h2>
                 <div class=ind>
-					David Miller - HEN page, which was modified for everything else<br>
-					ChendoChap - The HEN itself, and the netcat page<br>
 					Synacktiv - WebKit exploit<br>
 					Sleirsgoevy - ported the WebKit exploit to 7.02<br>
 					Andy Nguyen - kernel exploit<br>
-					SpecterDev, kiwidog, Fire30 and SocraticBliss were also involved.
+					David Miller - HEN page, which was modified for everything else<br>
+					ChendoChap - HEN payload, and the netcat page<br>
+					tihmstar - 7.02 offsets in the Linux loader, also added SATA support to the kernel<br>
 				</div>
     </body>
 </html>
