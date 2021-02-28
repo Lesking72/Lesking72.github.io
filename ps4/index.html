@@ -33,9 +33,23 @@
 		<script>
             function onloadActions() {
                 if (navigator.userAgent.substring(0, 30) != "Mozilla/5.0 (PlayStation 4 7.0") {
-                    alert("Visit me from a 7.0x PS4!")
+                    alert("Visit me from a 7.0x PS4!");
 					//document.getElementById("body").innerHTML = '<h1 style="color: #ffffff">Visit me from a 7.0x PS4!</h1>';
                 }
+				window.applicationCache.ondownloading = function()
+        		{
+            		document.getElementById("cachestat").innerHTML = "Caching started...";
+        		}
+
+        		window.applicationCache.onprogress = function(a)
+        		{
+        		    document.getElementById("cachestat").innerHTML = "Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed";
+        		}
+
+				window.applicationCache.oncached = window.applicationCache.onupdateready = function()
+        		{
+            		document.getElementById("cachestat").innerHTML = "Cache complete!";
+        		}
             }
         </script>
 	</head>
@@ -54,13 +68,10 @@
 		<a class="btn" href="sleirs/index.html#f=linux.js">LINUX 1GB</a>
 		<a class="btn" href="sleirs/index.html#f=linux-3gb.js">LINUX 3GB</a>
 
-		<div style="height:32px"></div>
-		
-		<h3 style="color: #ffffff">Untested</h3>
 		<a class="btn" href="app2usb/index.html">APP2USB</a>
 		<a class="btn" href="backup/index.html">BACKUP</a>
-		<a class="btn" href="dumper/index.html">DUMPER</a>
 		<div style="height:5px"></div>
+		<a class="btn" href="dumper/index.html">DUMPER</a>
 		<a class="btn" href="enable-browser/index.html">ENABLE BROWSER</a>
 		<a class="btn" href="kernel-clock/index.html">KERNEL CLOCK</a>
 		<div style="height:5px"></div>
@@ -71,6 +82,7 @@
 		<image class="obamid" src="cc1.gif">
 
 		<footer>
+		<div id="cachestat"></div>
 		netcat page by <a href="https://github.com/ChendoChap/ps4-ipv6-uaf/tree/7.00-7.02">ChendoChap</a>, hen page by <a href="https://github.com/dmiller423/dmiller423.github.io">David Miller</a><br>
 		Mira & Linux pages were unceremoniously stolen from <a href="https://github.com/sleirsgoevy/ps4jb">Sliersgoevy</a><br>
 		Everything else was modified from the hen page with the <a href="https://github.com/Scene-Collective/ps4-payload-repo">scene-collective payloads</a>.<br>
