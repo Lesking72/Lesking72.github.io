@@ -1,92 +1,99 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
-	<head>
-		<title>The Stuff</title>
-		<style>
-			body {
-				font-family: sans-serif;
-				background-image: url("bg.jpg");
-				background-size: cover;
-			}
-			.btn {
-				background-color: #007caa;
-				border: none;
-				color: white;
-				padding: 15px 32px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-			}
-			footer {
-  				position: fixed;
-  				left: 0;
-  				bottom: 0;
-  				width: 100%;
-			}
-			.obamid {
-				position: fixed;
-				left: 80%;
-				bottom: 0;
-			}	
-		</style>
-		<script>
+    <head>
+        <title>The Stuff</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                background-image: url("bg.jpg");
+                background-size: cover;
+                color: #ffffff;
+            }
+            .btn {
+                background-color: #007caa;
+                border: none;
+                color: #ffffff;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                /*width: 100%;*/
+                background-color: #000000;
+            }
+            .decorative-shitpost {
+                position: fixed;
+                left: 80%;
+                bottom: 0;
+            }    
+        </style>
+        <script>
             function onloadActions() {
                 if (navigator.userAgent.substring(0, 30) != "Mozilla/5.0 (PlayStation 4 7.0") {
                     alert("Visit me from a 7.0x PS4!");
-					//document.getElementById("body").innerHTML = '<h1 style="color: #ffffff">Visit me from a 7.0x PS4!</h1>';
                 }
-				window.applicationCache.ondownloading = function()
-        		{
-            		document.getElementById("cachestat").innerHTML = "Caching started...";
-        		}
-
-        		window.applicationCache.onprogress = function(a)
-        		{
-        		    document.getElementById("cachestat").innerHTML = "Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed";
-        		}
-
-				window.applicationCache.oncached = window.applicationCache.onupdateready = function()
-        		{
-            		document.getElementById("cachestat").innerHTML = "Cache complete!";
-        		}
+                window.applicationCache.onchecking = function()
+                {
+                    document.getElementById("cachestat").innerHTML = "Cache Status: Checking for updates...";
+                }
+                window.applicationCache.onnoupdate = function()
+                {
+                    document.getElementById("cachestat").innerHTML = "Cache Status: No new updates.";
+                }
+                window.applicationCache.onerror = function()
+                {
+                    document.getElementById("cachestat").innerHTML = "Cache Status: Couldn't check for updates."
+                }
+                window.applicationCache.ondownloading = function()
+                {
+                    document.getElementById("cachestat").innerHTML = "Cache Status: Updating...";
+                }
+                window.applicationCache.onprogress = function(a)
+                {
+                    document.getElementById("body").innerHTML = "<h1>Updating Cache: "+(Math.round(100*(a.loaded/a.total)))+"% Complete</h1>";
+                }
+                window.applicationCache.oncached = window.applicationCache.onupdateready = function()
+                {
+				    window.location.reload(false); 
+                }
             }
         </script>
-	</head>
-	<body id="body" onload="onloadActions()">
-		<h1 style="color: #ffffff;">The Stuff - 7.0x edition </h1>
-		<a class="btn" href="netcat/index.html">NETCAT :9020</a>
-		<a class="btn" href="hen/index.html">HEN</a>
-		<a class="btn" href="ftp/index.html">FTP :1337</a>
-		<a class="btn" href="disable-updates/index.html">DISABLE UPDATES</a>
-		<div style="height:5px"></div>
-		<a class="btn" href="enable-updates/index.html">ENABLE UPDATES</a>
-		<a class="btn" href="fan-threshold/index.html">FAN THRESHOLD 60&deg;C</a>
-		<a class="btn" href="history-blocker/index.html">HISTORY BLOCKER</a>
-		<div style="height:5px"></div>
-		<a class="btn" href="sleirs/index.html#f=mira2.js">MIRA</a>
-		<a class="btn" href="sleirs/index.html#f=linux.js">LINUX 1GB</a>
-		<a class="btn" href="sleirs/index.html#f=linux-3gb.js">LINUX 3GB</a>
+    </head>
+    <body id="body" onload="onloadActions()">
+        <h1>The Stuff - 7.0x edition </h1>
+        <a class="btn" href="netcat/index.html">NETCAT :9020</a>
+        <a class="btn" href="hen/index.html">HEN</a>
+        <a class="btn" href="ftp/index.html">FTP :1337</a>
+        <a class="btn" href="disable-updates/index.html">DISABLE UPDATES</a>
+        <div style="height:5px"></div>
+        <a class="btn" href="enable-updates/index.html">ENABLE UPDATES</a>
+        <a class="btn" href="fan-threshold/index.html">FAN THRESHOLD 60&deg;C</a>
+        <a class="btn" href="history-blocker/index.html">HISTORY BLOCKER</a>
+        <div style="height:5px"></div>
+        <a class="btn" href="sleirs/index.html#f=mira2.js">MIRA</a>
+        <a class="btn" href="sleirs/index.html#f=linux.js">LINUX 1GB</a>
+        <a class="btn" href="sleirs/index.html#f=linux-3gb.js">LINUX 3GB</a>
+        <a class="btn" href="app2usb/index.html">APP2USB</a>
+        <a class="btn" href="backup/index.html">BACKUP</a>
+        <div style="height:5px"></div>
+        <a class="btn" href="dumper/index.html">DUMPER</a>
+        <a class="btn" href="enable-browser/index.html">ENABLE BROWSER</a>
+        <a class="btn" href="kernel-clock/index.html">KERNEL CLOCK</a>
+        <div style="height:5px"></div>
+        <a class="btn" href="kernel-dumper/index.html">KERNEL DUMPER</a>
+        <a class="btn" href="restore/index.html">RESTORE</a>
+        <a class="btn" href="rif-renamer/index.html">RIF RENAMER</a>
+        
+        <!--<image class="decorative-shitpost" src="">-->
 
-		<a class="btn" href="app2usb/index.html">APP2USB</a>
-		<a class="btn" href="backup/index.html">BACKUP</a>
-		<div style="height:5px"></div>
-		<a class="btn" href="dumper/index.html">DUMPER</a>
-		<a class="btn" href="enable-browser/index.html">ENABLE BROWSER</a>
-		<a class="btn" href="kernel-clock/index.html">KERNEL CLOCK</a>
-		<div style="height:5px"></div>
-		<a class="btn" href="kernel-dumper/index.html">KERNEL DUMPER</a>
-		<a class="btn" href="restore/index.html">RESTORE</a>
-		<a class="btn" href="rif-renamer/index.html">RIF RENAMER</a>
-		
-		<image class="obamid" src="cc1.gif">
-
-		<footer>
-		<div id="cachestat"></div>
-		netcat page by <a href="https://github.com/ChendoChap/ps4-ipv6-uaf/tree/7.00-7.02">ChendoChap</a>, hen page by <a href="https://github.com/dmiller423/dmiller423.github.io">David Miller</a><br>
-		Mira & Linux pages were unceremoniously stolen from <a href="https://github.com/sleirsgoevy/ps4jb">Sliersgoevy</a><br>
-		Everything else was modified from the hen page with the <a href="https://github.com/Scene-Collective/ps4-payload-repo">scene-collective payloads</a>.<br>
-		Direct all questions, comments or hate-mail to Les#5465. <a href="info.html">Info/FAQ</a> | <a href="https://lesking72.github.io/ps4/selfhost.zip">Self-Host zip</a>
-		</footer>
-	</body>
+        <footer>
+        <div id="cachestat">Cache Status: Not Supported.</div>
+        Direct all questions, comments or hate-mail to Les#5465. <a href="info.html">Info/FAQ</a> | <a href="changelog.html">Changelog</a> | <a href="https://lesking72.github.io/ps4/selfhost.zip">Self-Host zip</a>
+        </footer>
+    </body>
 </html>

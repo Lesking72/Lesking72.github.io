@@ -18,25 +18,12 @@
         <h1>Questions you probably don't have</h1>
             <h2>Does this cache for offline use?</h2>
 				<div class=ind>
-					Yes. Cache status is displayed in the footer the first time the menu loads, and every time the cache is being updated.<br>
+					Yes. Cache status is displayed in the footer.<br>
 					If you have cache issues, clear ALL your browser data, power off (not restart) and try again.
-				</div>
-			<h2>What are the 'untested' payloads?</h2>
-				<div class=ind>
-					'untested' simply means I haven't tested them. So I can't speak as to whether they work on this exploit host<br>
-					(or if they work at all). If you've tested one, please drop me a line.
-				</div>
-			<h2>Can you add X?</h2>
-                <div class=ind>
-					Probably not, but it never hurts to ask. This is mostly a stop-gap until the usual sources update their hosts.
 				</div>
 			<h2>Is there a self-host version?</h2>
                 <div class=ind>
 				<a href="https://lesking72.github.io/ps4/selfhost.zip">https://lesking72.github.io/ps4/selfhost.zip</a>. It can be hosted with a server such as <a href="http://miniweb.sourceforge.net/">MiniWeb</a>
-				</div>
-			<h2>What on earth is that styling?</h2>
-                <div class=ind>
-					heh, tech tips
 				</div>
 			<h2>Do I really need to restart after each failure?</h2>
 				<div class=ind>
@@ -54,16 +41,17 @@
 				</div>
 			<h2>What's IDU mode?</h2>
 				<div class=ind>
-					Store demo mode. It automatically updates the firmware, which will leave you stuck in<br>
-					IDU mode because you won't be able to access the debug settings to turn it off.<br>
-					<b>DON'T ENABLE IDU MODE OR YOU'LL BE STUCK ON THE LATEST FIRMWARE, AND IN IDU MODE.</b><br>
-					If you enabled it and had your firmware update, the only thing you can do is put your PS4<br>
-					in the back of a closet until an exploit is released for the version it updated to.
+					Don't. HEN includes a remote play enabler if that's what you're after.
 				</div>
             <h2>Credits:</h2>
                 <div class=ind>
-					Synacktiv - WebKit exploit<br>
-					Sleirsgoevy - ported the WebKit exploit to 7.02<br>
+					For this host:<br>
+					netcat page by <a href="https://github.com/ChendoChap/ps4-ipv6-uaf/tree/7.00-7.02">ChendoChap</a>, hen page by <a href="https://github.com/dmiller423/dmiller423.github.io">David Miller</a><br>
+        			Mira &amp; Linux pages by <a href="https://github.com/sleirsgoevy/ps4jb">Sliersgoevy</a><br>
+        			Everything else was modified from the hen page with the <a href="https://github.com/Scene-Collective/ps4-payload-repo">scene-collective payloads</a>.<br>
+					<br>
+					For the exploit in general:<br>
+					Synacktiv - WebKit exploit, Sliersgoevy ported it to 7.0x<br>
 					Andy Nguyen - kernel exploit<br>
 					David Miller - HEN page, which was modified for everything else<br>
 					ChendoChap - HEN payload, and the netcat page<br>
