@@ -8,9 +8,14 @@
                 background-image: url("bg.jpg");
                 background-size: cover;
                 color: #ffffff;
+                text-align: center;
+            }
+            a {
+                color: #0000FF;
             }
             .btn {
-                background-color: #007caa;
+                /*background-color: #007caa;*/
+                background-color: #1a246c;
                 border: none;
                 color: #ffffff;
                 padding: 15px 32px;
@@ -25,17 +30,21 @@
                 bottom: 0;
                 width: 100%;
                 background-color: #000000;
+                text-align: left;
             }
-            .decorative-shitpost {
+            .dialog {
                 position: fixed;
-                left: 80%;
-                bottom: 0;
-            }    
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                padding: 0px 50px;
+            }
         </style>
         <script>
             function onloadActions() {
                 if (navigator.userAgent.substring(0, 30) != "Mozilla/5.0 (PlayStation 4 7.0") {
-                    alert("Visit me from a 7.0x PS4!");
+                    document.getElementById("body").innerHTML = '<div class=dialog><h1>Visit me from a 7.0x PS4!</h1><a class=btn href="https://lesking72.github.io/ps4/selfhost.zip">Download Self-Host Zip</a></div>'
                 }
                 window.applicationCache.onchecking = function()
                 {
@@ -47,7 +56,7 @@
                 }
                 window.applicationCache.onerror = function()
                 {
-                    document.getElementById("cachestat").innerHTML = "Cache Status: Couldn't check for updates."
+                    document.getElementById("cachestat").innerHTML = "Cache Status: Couldn't update."
                 }
                 window.applicationCache.ondownloading = function()
                 {
@@ -55,7 +64,7 @@
                 }
                 window.applicationCache.onprogress = function(a)
                 {
-                    document.getElementById("body").innerHTML = "<h1>Updating Cache: "+(Math.round(100*(a.loaded/a.total)))+"% Complete</h1>";
+                    document.getElementById("body").innerHTML = "<div class=dialog><h1>Updating Cache: "+(Math.round(100*(a.loaded/a.total)))+"% Complete</h1></div>";
                 }
                 window.applicationCache.oncached = window.applicationCache.onupdateready = function()
                 {
@@ -88,12 +97,10 @@
         <a class="btn" href="kernel-dumper/index.html">KERNEL DUMPER</a>
         <a class="btn" href="restore/index.html">RESTORE</a>
         <a class="btn" href="rif-renamer/index.html">RIF RENAMER</a>
-        
-        <!--<image class="decorative-shitpost" src="">-->
 
         <footer>
         <div id="cachestat">Cache Status: Not Supported.</div>
-        Direct all questions, comments or hate-mail to Les#5465. <a href="info.html">Info/FAQ</a> | <a href="changelog.html">Changelog</a> | <a href="https://lesking72.github.io/ps4/selfhost.zip">Self-Host zip</a>
+        Direct all questions, comments or hate-mail to Les#5465. <a href="info.html">Info/FAQ</a> | <a href="changelog.html">Changelog</a> | <a href="https://lesking72.github.io/ps4/selfhost.zip">Self-Host Zip</a>
         </footer>
     </body>
 </html>
