@@ -7,16 +7,23 @@
                 font-family: sans-serif;
                 background-image: url("bg.jpg");
                 background-size: cover;
+                background-repeat: no-repeat;
                 color: #ffffff;
+                background-color: #172567;
                 text-align: center;
+            }
+            .version {
+                position: absolute;
+                top: 8px;
+                text-align: left;
+                opacity: 0.4;
             }
             a {
                 color: #0000FF;
             }
             .btn {
-                /*background-color: #007caa;*/
-                background-color: #1a246c;
-                border: none;
+                /*background-color: #1a246c;*/
+                background-color: #2280cf;
                 color: #ffffff;
                 padding: 15px 32px;
                 text-align: center;
@@ -32,7 +39,7 @@
                 background-color: #000000;
                 text-align: left;
             }
-            .dialog {
+            .center {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -61,19 +68,20 @@
                     }
                     window.applicationCache.onprogress = function(a)
                     {
-                        document.getElementById("body").innerHTML = "<div class=dialog><h1>Updating Cache: "+(Math.round(100*(a.loaded/a.total)))+"% (" + a.loaded + "/" + a.total + ")</h1></div>";
+                        document.getElementById("body").innerHTML = "<div class=center><h1>Updating Cache: "+(Math.round(100*(a.loaded/a.total)))+"% (" + a.loaded + "/" + a.total + ")</h1></div>";
                     }
                     window.applicationCache.oncached = window.applicationCache.onupdateready = function()
                     {
 				        window.location.reload(false); 
                     }
                 }else{
-                    document.getElementById("body").innerHTML = '<div class=dialog><h1>Visit me from a 7.0x PS4!</h1><a class=btn href="https://lesking72.github.io/ps4/selfhost.zip">Download Self-Host Zip</a></div>'
+                    document.getElementById("body").innerHTML = '<div class=center><h1>Visit me from a 7.0x PS4!</h1><a class=btn href="https://lesking72.github.io/ps4/selfhost.zip">Download Self-Host Zip</a></div>'
                 }
             }
         </script>
     </head>
     <body id="body" onload="onloadActions()">
+        <div class="version">Ver. 2021-03-02</div>
         <h1>The Stuff - 7.02 Exploit Menu</h1>
         <a class="btn" href="netcat/index.html">NETCAT :9020</a>
         <a class="btn" href="hen/index.html">HEN-VTX</a>
@@ -98,9 +106,16 @@
         <a class="btn" href="restore/index.html">RESTORE</a>
         <a class="btn" href="rif-renamer/index.html">RIF RENAMER</a>
 
-        <footer>
+        <!--<footer>
         <div id="cachestat">Cache Status: unknown</div>
         Direct all questions, comments or hate-mail to Les#5465. <a href="info.html">Info/FAQ</a> | <a href="changelog.html">Changelog</a> | <a href="https://lesking72.github.io/ps4/selfhost.zip">Self-Host Zip</a>
         </footer>
+        -->
+        <footer>
+        <table style="width: 100%">
+            <td id="cachestat">Cache Status: unknown</td>
+            <td style="text-align: right"> <a href="info.html">Info/FAQ</a> | <a href="changelog.html">Changelog</a></td>
+        </table>
+        </footer>
     </body>
-</html>
+</html> 
