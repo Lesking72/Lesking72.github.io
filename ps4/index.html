@@ -38,45 +38,45 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
-                padding: 0px 50px;
             }
         </style>
         <script>
             function onloadActions() {
-                if (navigator.userAgent.substring(0, 30) != "Mozilla/5.0 (PlayStation 4 7.0") {
+                if (navigator.userAgent.substring(0, 30) == "Mozilla/5.0 (PlayStation 4 7.0") {
+                    window.applicationCache.onchecking = function()
+                    {
+                        document.getElementById("cachestat").innerHTML = "Cache Status: Checking for updates...";
+                    }
+                    window.applicationCache.onnoupdate = function()
+                    {
+                        document.getElementById("cachestat").innerHTML = "Cache Status: No new updates.";
+                    }
+                    window.applicationCache.onerror = function()
+                    {
+                        document.getElementById("cachestat").innerHTML = "Cache Status: Couldn't update."
+                    }
+                    window.applicationCache.ondownloading = function()
+                    {
+                        document.getElementById("cachestat").innerHTML = "Cache Status: Updating...";
+                    }
+                    window.applicationCache.onprogress = function(a)
+                    {
+                        document.getElementById("body").innerHTML = "<div class=dialog><h1>Updating Cache: "+(Math.round(100*(a.loaded/a.total)))+"% (" + a.loaded + "/" + a.total + ")</h1></div>";
+                    }
+                    window.applicationCache.oncached = window.applicationCache.onupdateready = function()
+                    {
+				        window.location.reload(false); 
+                    }
+                }else{
                     document.getElementById("body").innerHTML = '<div class=dialog><h1>Visit me from a 7.0x PS4!</h1><a class=btn href="https://lesking72.github.io/ps4/selfhost.zip">Download Self-Host Zip</a></div>'
-                }
-                window.applicationCache.onchecking = function()
-                {
-                    document.getElementById("cachestat").innerHTML = "Cache Status: Checking for updates...";
-                }
-                window.applicationCache.onnoupdate = function()
-                {
-                    document.getElementById("cachestat").innerHTML = "Cache Status: No new updates.";
-                }
-                window.applicationCache.onerror = function()
-                {
-                    document.getElementById("cachestat").innerHTML = "Cache Status: Couldn't update."
-                }
-                window.applicationCache.ondownloading = function()
-                {
-                    document.getElementById("cachestat").innerHTML = "Cache Status: Updating...";
-                }
-                window.applicationCache.onprogress = function(a)
-                {
-                    document.getElementById("body").innerHTML = "<div class=dialog><h1>Updating Cache: "+(Math.round(100*(a.loaded/a.total)))+"% Complete</h1></div>";
-                }
-                window.applicationCache.oncached = window.applicationCache.onupdateready = function()
-                {
-				    window.location.reload(false); 
                 }
             }
         </script>
     </head>
     <body id="body" onload="onloadActions()">
-        <h1>The Stuff - 7.0x edition </h1>
+        <h1>The Stuff - 7.02 Exploit Menu</h1>
         <a class="btn" href="netcat/index.html">NETCAT :9020</a>
-        <a class="btn" href="hen/index.html">HEN</a>
+        <a class="btn" href="hen/index.html">HEN-VTX</a>
         <a class="btn" href="ftp/index.html">FTP :1337</a>
         <a class="btn" href="disable-updates/index.html">DISABLE UPDATES</a>
         <div style="height:5px"></div>
@@ -99,7 +99,7 @@
         <a class="btn" href="rif-renamer/index.html">RIF RENAMER</a>
 
         <footer>
-        <div id="cachestat">Cache Status: Not Supported.</div>
+        <div id="cachestat">Cache Status: unknown</div>
         Direct all questions, comments or hate-mail to Les#5465. <a href="info.html">Info/FAQ</a> | <a href="changelog.html">Changelog</a> | <a href="https://lesking72.github.io/ps4/selfhost.zip">Self-Host Zip</a>
         </footer>
     </body>

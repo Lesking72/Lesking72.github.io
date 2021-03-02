@@ -19,17 +19,21 @@
             <h2>Does this cache for offline use?</h2>
 				<div class=ind>
 					Yes. Cache status is displayed in the footer.<br>
-					If you have cache issues, clear ALL your browser data, power off (not restart) and try again.
+					If you have cache issues, clear ALL your browser data, power off completely and try again.
 				</div>
 			<h2>Is there a self-host version?</h2>
                 <div class=ind>
-				<a href="https://lesking72.github.io/ps4/selfhost.zip">https://lesking72.github.io/ps4/selfhost.zip</a>. It can be hosted with a server such as <a href="http://miniweb.sourceforge.net/">MiniWeb</a>
+				<a href="https://lesking72.github.io/ps4/selfhost.zip">https://lesking72.github.io/ps4/selfhost.zip</a>
 				</div>
 			<h2>Do I really need to restart after each failure?</h2>
 				<div class=ind>
-					If you get an "Out of memory" error, you can dismiss it and let the page reload to try again. If you get any other<br>
-					error, restart the console through the quick menu or using the power button on the console. Don't close the dialog box,<br>
-					because that usually results in a panic.
+					If you get an "out of memory" error, click OK. This error will not harm your console.<br>
+					If you get "failed to set up a relative ___ primitive," restart.<br>
+					If you get "failed to find slave," turn the console off using the power button, without closing the dialog box.<br>
+					-Using the power button seems to have the lowest chance of panics for this error.<br>
+					<br>
+					If you keep getting OOM, back out of the browser and open the settings menu, then go back to the browser.<br>
+					This causes the webkit process to restart. Alternatively, power off completely and try again.
 				</div>
 			<h2>Should the screen go black when starting Mira?</h2>
 				<div class=ind>
@@ -46,8 +50,8 @@
             <h2>Credits:</h2>
                 <div class=ind>
 					For this host:<br>
-					netcat page by <a href="https://github.com/ChendoChap/ps4-ipv6-uaf/tree/7.00-7.02">ChendoChap</a>, hen page by <a href="https://github.com/dmiller423/dmiller423.github.io">David Miller</a><br>
-        			Mira &amp; Linux pages by <a href="https://github.com/sleirsgoevy/ps4jb">Sliersgoevy</a><br>
+					netcat page by <a href="https://github.com/ChendoChap/ps4-ipv6-uaf/tree/7.00-7.02">ChendoChap</a>, hen page by <a href="https://github.com/dmiller423/dmiller423.github.io">David Miller</a>,
+					Mira &amp; Linux pages by <a href="https://github.com/sleirsgoevy/ps4jb">Sliersgoevy</a><br>
         			Everything else was modified from the hen page with the <a href="https://github.com/Scene-Collective/ps4-payload-repo">scene-collective payloads</a>.<br>
 					<br>
 					For the exploit in general:<br>
@@ -55,7 +59,7 @@
 					Andy Nguyen - kernel exploit<br>
 					David Miller - HEN page, which was modified for everything else<br>
 					ChendoChap - HEN payload, and the netcat page<br>
-					tihmstar - 7.02 offsets in the Linux loader, also added SATA support for Belize consoles to the kernel<br>
+					tihmstar - 7.02 offsets in the Linux loader<br>
 				</div>
     </body>
 </html>
