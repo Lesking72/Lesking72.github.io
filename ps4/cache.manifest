@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2021-03-02 18:00 EST
+# 2021-03-21 21:50 EDT
 
 bg.jpg
 index.html
@@ -21,6 +21,8 @@ fan-threshold/index.html
 fan-threshold/userland.js
 ftp/index.html
 ftp/userland.js
+goldhen/index.html
+goldhen/userland.js
 hen/index.html
 hen/userland.js
 history-blocker/index.html

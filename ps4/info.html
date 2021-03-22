@@ -26,15 +26,15 @@
 					<a class=btn href="https://lesking72.github.io/ps4/selfhost.zip">selfhost.zip</a>
 				</div>
 			<h2>Do I really need to restart after each failure?</h2>
-				<div class=ind>
-					If you get an "out of memory" error, click OK. This error will not harm your console.<br>
-					If you get "failed to set up a relative ___ primitive," restart.<br>
-					If you get "failed to find slave," turn the console off using the power button, without closing the dialog box.<br>
-					-Using the power button seems to have the lowest chance of panics for this error.<br>
+					<ul>
+						<li>If you get an "out of memory" error, click OK. This error will not harm your console.</li>
+						<li>If you get "failed to set up a relative ___ primitive," restart.</li>
+						<li>If you get "failed to find slave," turn the console off using the power button, without closing the dialog box.<br>
+						-Using the power button seems to have the lowest chance of panics for this error.</li>
 					<br>
-					If you keep getting OOM, back out of the browser and open the settings menu, then go back to the browser.<br>
-					This causes the webkit process to restart. Alternatively, power off completely and try again.
-				</div>
+						<li>If you keep getting OOM, back out of the browser and open the settings menu, then go back to the browser.<br>
+					This causes the webkit process to restart. Alternatively, power off completely and try again.</ul>
+					</ul>
 			<h2>Should the screen go black when starting Mira?</h2>
 				<div class=ind>
 					Mira restarts the shell when it loads, this behavior is normal.
@@ -44,6 +44,14 @@
 					If you don't know what something does, don't touch it.<br>
 					<b>especially</b> IDU mode.
 				</div>
+			<h2>How can I make the browser open on this page?</h2>
+				<ul>
+					<li>Use Al Azif's DNS: 165.227.83.145 and 192.241.221.79</li>
+					<li>Run the history blocker payload</li>
+					<li>Place <a href="ApplicationCache.db">ApplicationCache.db</a> in /user/system/webkit/webbrowser/appcache, delete the .db-shm and .db-wal files.</li>
+					<li>Restart the browser</li>
+					<li>You'll need to replace the database file every time you clear the cache.</li>
+				</ul>
 			<h2>I have other questions/comments/hate mail</h2>
 				<div class=ind>
 					Send it to Les#5465.
@@ -60,6 +68,7 @@
 					Andy Nguyen - kernel exploit<br>
 					David Miller - HEN page, which was modified for everything else<br>
 					ChendoChap - HEN payload, and the netcat page<br>
+					SiSTRo - GoldHEN<br>
 					tihmstar - 7.02 offsets in the Linux loader<br>
 				</div>
     </body>

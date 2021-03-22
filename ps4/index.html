@@ -60,7 +60,7 @@
                     }
                     window.applicationCache.onerror = function()
                     {
-                        document.getElementById("cachestat").innerHTML = "Cache Status: Couldn't update."
+                        document.getElementById("cachestat").innerHTML = "Cache Status: Couldn't update.";
                     }
                     window.applicationCache.ondownloading = function()
                     {
@@ -75,16 +75,17 @@
 				        window.location.reload(false); 
                     }
                 }else{
-                    document.getElementById("body").innerHTML = '<div class=center><h1>Visit me from a 7.0x PS4!</h1><a class=btn href="https://lesking72.github.io/ps4/selfhost.zip">Download Self-Host Zip</a></div>'
+                    document.getElementById("body").innerHTML = '<div class=center><h1>Visit me from a 7.0x PS4!</h1><a class=btn href="info.html">Info Page</a></div>';
                 }
             }
         </script>
     </head>
     <body id="body" onload="onloadActions()">
-        <div class="version">Ver. 2021-03-02</div>
+        <div class="version">Ver. 2021-03-21</div>
         <h1>The Stuff - 7.02 Exploit Menu</h1>
         <a class="btn" href="netcat/index.html">NETCAT :9020</a>
         <a class="btn" href="hen/index.html">HEN-VTX</a>
+        <a class="btn" href="goldhen/index.html">GOLDHEN</a>
         <a class="btn" href="ftp/index.html">FTP :1337</a>
         <a class="btn" href="disable-updates/index.html">DISABLE UPDATES</a>
         <div style="height:5px"></div>
@@ -106,11 +107,6 @@
         <a class="btn" href="restore/index.html">RESTORE</a>
         <a class="btn" href="rif-renamer/index.html">RIF RENAMER</a>
 
-        <!--<footer>
-        <div id="cachestat">Cache Status: unknown</div>
-        Direct all questions, comments or hate-mail to Les#5465. <a href="info.html">Info/FAQ</a> | <a href="changelog.html">Changelog</a> | <a href="https://lesking72.github.io/ps4/selfhost.zip">Self-Host Zip</a>
-        </footer>
-        -->
         <footer>
         <table style="width: 100%">
             <td id="cachestat">Cache Status: unknown</td>
