@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
+<html>
     <head>
         <title>The Stuff</title>
         <style>
@@ -74,6 +75,7 @@
                     {
 				        window.location.reload(false); 
                     }
+                    document.cookie = 'kex=1';
                 }else{
                     document.getElementById("body").innerHTML = '<div class=center><h1>Visit me from a 7.0x PS4!</h1><a class=btn href="info.html">Info Page</a></div>';
                 }
@@ -81,31 +83,32 @@
         </script>
     </head>
     <body id="body" onload="onloadActions()">
-        <div class="version">Ver. 2021-03-21</div>
+        <div class="version">Ver. 2021-03-22</div>
         <h1>The Stuff - 7.02 Exploit Menu</h1>
-        <a class="btn" href="netcat/index.html">NETCAT :9020</a>
-        <a class="btn" href="hen/index.html">VTX HEN</a>
-        <a class="btn" href="goldhen/index.html">GOLDHEN</a>
-        <a class="btn" href="ftp/index.html">FTP :1337</a>
-        <a class="btn" href="disable-updates/index.html">DISABLE UPDATES</a>
+        <!--<a class="btn" href="netcat_legacy/index.html">NETCAT (LEGACY)</a>-->
+        <a class="btn" href="exploit.html">NETCAT :9021</a>
+        <a class="btn" href="exploit.html#f=vtx-hen">VTX HEN</a>
+        <a class="btn" href="exploit.html#f=goldhen">GOLDHEN</a>
+        <a class="btn" href="exploit.html#f=FTP">FTP :1337</a>
+        <a class="btn" href="exploit.html#f=Disable-Updates">DISABLE UPDATES</a>
         <div style="height:5px"></div>
-        <a class="btn" href="enable-updates/index.html">ENABLE UPDATES</a>
-        <a class="btn" href="fan-threshold/index.html">FAN THRESHOLD 60&deg;C</a>
-        <a class="btn" href="history-blocker/index.html">HISTORY BLOCKER</a>
+        <a class="btn" href="exploit.html#f=Enable-Updates">ENABLE UPDATES</a>
+        <a class="btn" href="exploit.html#f=Fan-Threshold">FAN THRESHOLD 60&deg;C</a>
+        <a class="btn" href="exploit.html#f=History-Blocker">HISTORY BLOCKER</a>
         <div style="height:5px"></div>
-        <a class="btn" href="sleirs/index.html#f=mira2.js">MIRA</a>
-        <a class="btn" href="sleirs/index.html#f=linux.js">LINUX 1GB</a>
-        <a class="btn" href="sleirs/index.html#f=linux-3gb.js">LINUX 3GB</a>
-        <a class="btn" href="app2usb/index.html">APP2USB</a>
-        <a class="btn" href="backup/index.html">BACKUP</a>
+        <a class="btn" href="exploit.html#f=mira">MIRA</a>
+        <a class="btn" href="exploit.html#f=linux">LINUX 1GB</a>
+        <a class="btn" href="exploit.html#f=linux-3gb">LINUX 3GB</a>
+        <a class="btn" href="exploit.html#f=App2USB">APP2USB</a>
+        <a class="btn" href="exploit.html#f=Backup">BACKUP</a>
         <div style="height:5px"></div>
-        <a class="btn" href="dumper/index.html">DUMPER</a>
-        <a class="btn" href="enable-browser/index.html">ENABLE BROWSER</a>
-        <a class="btn" href="kernel-clock/index.html">KERNEL CLOCK</a>
+        <a class="btn" href="exploit.html#f=Dumper">DUMPER</a>
+        <a class="btn" href="exploit.html#f=Enable-Browser">ENABLE BROWSER</a>
+        <a class="btn" href="exploit.html#f=Kernel-Clock">KERNEL CLOCK</a>
         <div style="height:5px"></div>
-        <a class="btn" href="kernel-dumper/index.html">KERNEL DUMPER</a>
-        <a class="btn" href="restore/index.html">RESTORE</a>
-        <a class="btn" href="rif-renamer/index.html">RIF RENAMER</a>
+        <a class="btn" href="exploit.html#f=Kernel-Dumper">KERNEL DUMPER</a>
+        <a class="btn" href="exploit.html#f=Restore">RESTORE</a>
+        <a class="btn" href="exploit.html#f=RIF-Renamer">RIF RENAMER</a>
 
         <footer>
         <table style="width: 100%">
